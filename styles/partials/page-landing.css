@@ -1,0 +1,140 @@
+#page-landing {
+    background: var(--color-primary); /* altera a cor do fundo */
+}
+
+#page-landing #container {
+    color: var(--color-text-in-primary) /* altera a cor da fonte */
+}
+
+.logo-container img {
+    height: 10rem; /* tamanho da imagem */
+}
+
+.logo-container {
+    text-align: center; /* alinha todos os textos e a img ao centro */
+    margin-bottom: 3.2rem; /*espaçamento inferior ao logo-container */
+}
+
+.logo-container h2 {
+    font-weight: 500; /* peso da fonte */
+    font-size: 3.6rem; /* tamanho da fonte */
+    line-height: 4.6rem; /* altura da linha do texto */
+    margin-top: 0.8rem; /* margem superior */
+}
+
+.hero-image {
+    width: 100%; /*100% da largura da div container, no qual ela está dentro */
+}
+.buttons-container {
+    display: flex; /* flexibilisa o alinhamento do conteúdo */
+    justify-content: center; /* alinhamento horizontal */
+    margin: 3.2rem 0; /* espaçamento cima-baixo 3.2rem, direita-esquerda 0 */
+
+}
+
+.buttons-container a {
+    width: 30rem; /* largura */
+    height: 10.4rem; /* altura */
+
+    border-radius: 0.8rem; /* raio da bordar de 0.8rem em cada canto */
+    margin-right: 1.6rem; /* espaçamento margem-direita */
+
+    font: 2.4rem Archivo;
+
+    display: flex;
+    align-items: center; /* alinhamento vertical */
+    justify-content: center; /* alinhamento horizontal */
+
+    text-decoration: none; /*retira a linha abaixo do texto */
+
+    color: var(--color-button-text);
+
+    transition: backgroud 0.2s; /* tempo da transição do hover no brackground */
+}
+
+.buttons-container a img { /* imagem central */
+    width: 4rem; /* largura */
+    margin-right: 2.4rem; /* espaçamento margem-direita */
+}
+
+.buttons-container a.study { /* botão - Estudar */
+    background: var(--color-primary-lighter);
+}
+
+.buttons-container a.study:hover{ /* hover - quando o mouse está focando */
+    background: var(--color-primary-light); /* muda a cor do background */
+}
+
+.buttons-container a.give-classes { /* botão - Dar Aulas */
+    background: var(--color-secondary);
+    margin-right: 0; /* espaçamento margem-direita */
+}
+
+.buttons-container a.give-classes:hover { /* hover - quando o mouse está focando */
+    background: var(--color-secondary-dark); /* muda a cor do background */
+}
+
+.total-connections { /* Texto - Total de 200... */
+    font-size:  1.8rem;
+
+    display: flex;
+    align-items: center; /* alinhamento vertical */
+    justify-content: center; /* alinhamento horizontal */
+}
+
+.total-connections img { /* coração */
+    margin-left: 0.8rem; /* espaçamento margem-esquerda */
+}
+
+@media (max-width: 699px) {
+    :root {
+        font-size: 40%; /* modifica as medidas rem */
+    }
+}
+
+@media (min-width: 1100px){
+    #page-landing #container {
+        max-width: 1100px;
+        display: grid; /* divide o display em colunas e linhas */
+        grid-template-columns: 2fr 1fr 2fr; 
+        /* divide o display em 5 frações e dristribui para 3 colunas com tamanhos diferentes */
+        grid-template-rows: 350px 1fr;
+        /* divide o display em 2 linhas, uma com 350px e a outra com 1fr */
+        grid-template-areas: /*posiciona cada elemento no grid */
+        "proffy image image" 
+        /*proffy 2fr, image 1fr + image 2fr*/
+        "button button texting"
+        /*button 2fr + button 1fr, texting 2fr */
+        ;
+        gap: 86px; /* distanciamento entre linhas e colunas */
+    }
+
+    .logo-container {
+        grid-area: proffy;
+        text-align: initial; /*alinha o contéudo no início */
+        align-self: center; /* alinha o seu conteúdo ao centro */
+        /* não deixa o conteúdo escapar do grid */
+        margin: 0;
+    }
+    .logo-container img {
+        height: 127px; /* tamanho da imagem */
+    }
+    .hero-image {
+        grid-area: image;
+        height: 350px;
+    }
+    .buttons-container {
+        grid-area: button;
+        /*display: flex; (já configurado na linha 32 */
+        /* flexibilisa o alinhamento do conteúdo */
+        justify-content: flex-start; /* justifica no início do grid */
+        /* justify do flex */
+        margin: 0;
+    }
+    .total-connections {
+        grid-area: texting;
+        justify-self: end; /* justifica no final do grid */
+        font-size:  1.2rem; /* tamanho do texto */
+
+    }
+}
