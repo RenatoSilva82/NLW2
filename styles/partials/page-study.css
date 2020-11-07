@@ -1,0 +1,115 @@
+#page-study #container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.page-header { /* área de cor lilás */
+    background-color: var(--color-primary);
+
+    display: flex; /* flexibiliza o posicionamento */
+    /* flex - coloca o conteúdo em linha - um do lado do outro */
+    flex-direction: column; /* posiciona em columas - um abaixo do outro */
+}
+
+.page-header .top-bar-container { /* img "seta" e img "Proffy" */
+    width: 90%; /* largura do preenchimento do .top-bar... de 90% do .page-header */
+    margin: 0 auto; /* 0 cima-baixo, auto direita-esquerda (mesma distância - centraliza) */
+
+    display: flex;
+    align-items: center; /* alinha ao centro */
+    justify-content: space-between; /* justifica espaçamento entre os conteúdos */
+
+    padding: 1.6rem 0; /* espaçamento interno */
+}
+
+.page-header .top-bar-container a img{ /* imagen "seta" */
+    height: 3.2rem; /* tamanho */
+    transition: opacity 0.2s; /* tipo de transição e tempo de transição */
+    /* precisa do hover (a baixo) para funcionar */
+}
+
+.page-header .top-bar-container a:hover { /* hover - quando o mouse está focando */ 
+    opacity: 0.6; /* diminui a opacidade para 60% */
+}
+
+.page-header .top-bar-container img { /* imagen "Proffy" */
+    height: 1.6rem; 
+}
+
+.page-header .header-content { /* conteúdo do formulário */
+    width: 90%; /* largura */
+    margin: 3.2rem auto; /* 3.2rem cima-baixo, auto direita-esquerda (mesma distância - centraliza) */
+}
+
+.page-header .header-content strong { /* texto "Essas são ... */
+    font: 700 3.6rem Archivo; /* configuração da fonte */
+    line-height: 4.2rem; /* altura entre as linhas do texto */
+    color: var(--color-title-in-primary);
+}
+
+#search-teachers { /* formulário */
+    margin-top: 3.2rem; /* margem superior */
+}
+
+#search-teachers label { /* textos do formulário */
+    color: var(--color-text-in-primary);
+}
+
+#search-teachers .select-block { /* select: matérias e dias */
+    margin-bottom: 1.4rem; /* margem inferior */
+}
+
+#search-teachers button {
+    width: 100%; /* largura */
+    height: 5.6rem; /* tamanho */
+    background: var(--color-secondary); /* cor de fundo */
+    color: var(--color-button-text); /* cor do texto */
+    border: 0; /* sombra da borda (0 - sem sombra) */
+    border-radius: 0.8rem; /* espessura da borda */
+    cursor: pointer; /* tipo do cursor */
+    font: 700 1.6rem Archivo; /* especificação da fonte*/
+    display: flex;
+    align-items: center; /* alinha o texto ao centro (vertical) */
+    justify-content: center; /* justifica o texto ao centro (horizontal) */
+    text-decoration: none; /* decoração do texto - nenhuma */
+    transition: background 0.2s; /* tipo e tempo da transição */
+    margin-top: 3.2rem; /* margin superior */
+}
+
+#search-teachers button:hover {
+    background-color: var(--color-secondary-dark); /* muda a cor do funto ao passar o mouse */
+}
+
+.select-block label, /* texto exterior do select e do input */
+.input-block label {
+    font-size: 1.4rem; /* tamanho */
+    color: var(--color-text-complement); /* cor */
+}
+
+.input-block input, 
+.select-block select {
+    width: 100%; /* largura */
+    height: 5.6rem; /* altura */
+    margin-top: 0.8rem; /* margem superior*/
+    border-radius: 0.8rem; /* arredondar bordas*/
+    background: var(--color-input-background); /* cor do fundo*/
+    border: 1px solid var(--color-line-in-white); /* especificação da borda */
+    outline: 0; /* tira a linha de borda ao selecionar o item */
+    padding: 0 1.6rem; /* margem interna */
+    font: 1.6rem Archivo; /* fonte */
+}
+
+.input-block {
+    position: relative; /* posição do elemento - video 02 - 1:58 */
+}
+
+.input-block:focus-within::after { /* quando algum elemento dentro do input estiver em foco */
+    content: ""; /* conteúdo do elemento a ser criado */
+    width: calc(100% - 3.2rem); /* largura do elemento criado */
+    /* menor que a largura do input-block 3.2rem */
+    height: 2px; /* tamanho */
+    background: var(--color-primary-light); /* cor de fundo*/
+    position: absolute; /* posição do elemento - video 02 - 1:58 (precisa do position relative (a cima)*/
+    left: 1.6rem; /* posição a esquerda ( video 02 - 2:01*/ 
+    bottom: 0;
+}

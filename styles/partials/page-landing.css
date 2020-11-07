@@ -18,7 +18,7 @@
 .logo-container h2 {
     font-weight: 500; /* peso da fonte */
     font-size: 3.6rem; /* tamanho da fonte */
-    line-height: 4.6rem; /* altura da linha do texto */
+    line-height: 4.6rem; /* altura entre as linhas do texto */
     margin-top: 0.8rem; /* margem superior */
 }
 
