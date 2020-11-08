@@ -110,6 +110,99 @@
     height: 2px; /* tamanho */
     background: var(--color-primary-light); /* cor de fundo*/
     position: absolute; /* posição do elemento - video 02 - 1:58 (precisa do position relative (a cima)*/
-    left: 1.6rem; /* posição a esquerda ( video 02 - 2:01*/ 
+    left: 1.6rem; /* posição a esquerda ( video 02 - 2:01) */ 
     bottom: 0;
+}
+
+#page-study main { /* espaça com todas as caixas dos professores */
+    margin: 3.2rem;
+    width: 90%;
+}
+
+.teacher-item { /* caixa de exibição de cada professor */
+    background-color: var(--color-box-base);
+    border: 1px solid var(--color-line-in-white);
+    border-radius: 0.8rem;
+    margin-top: 2.4rem
+}
+
+.teacher-item header { /* foto, nome, matéria */
+    padding: 3.2rem 2rem;
+    display: flex;
+    align-items: center; /* alinhamento vertical */
+}
+ 
+.teacher-item header img { /* imagem */
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%; /* faz a imagem ficar em um circulo */
+}
+
+.teacher-item header div { /* nome do professor e matéria */
+    margin-left: 2.4rem;
+}
+
+.teacher-item header div strong { /* nome do professor */
+    font: 700 2.4rem Archivo;
+    display: block; /* faz o elemento ocupar toda a linha */
+    color: var(--color-text-title)
+}
+
+.teacher-item header div span { /* matéria */
+    font-size: 1.6rem;
+    display: block; /* faz o elemento ocupar toda a linha */
+    margin-top: 0.4rem; /* precisa do display: block */
+}
+
+.teacher-item p { /* descrição do professor */
+    padding: 0 2rem; /* espaçamento - 0 cima e embaixo, 2 direita e esquerda */
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+
+.teacher-item footer { /* caixa de exibição do preço e contado do whatsapp */
+    padding: 3.2rem 2rem; /* espaçamento - 3.2 cima e embaixo, 2 direita e esquerda */
+    background-color: var(--color-box-footer);
+    border-top: 1px solid var(--color-line-in-white); /* linha acima do preço */
+    margin-top: 3.2rem;
+
+    display: flex; /* um elemento ao lado do outro */
+    align-items: center; /* centalizado verticalmente */
+    justify-content: space-between; /* mesmo espaço entre os elementos e a borda */
+}
+
+.teacher-item footer p { /* Preço/hora e R$20,00 */
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--color-text-complement);
+}
+
+.teacher-item footer p strong { /* R$20,00 */
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    display: block; /* faz o elemento ocupar toda a linha */
+}
+
+.teacher-item footer button { /* btão "Entrar em contato" */
+    width: 20rem;
+    height: 5.6rem;
+    background: var(--color-secondary);
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font: 700 1.4rem Archivo;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; /* espaçamento constante entre os elementos e as bordas */
+
+    text-decoration: none;
+
+    transition: background 0.2s;
+    margin-left: 1.6rem;
+} 
+
+.teacher-item footer button:hover {
+    background: var(--color-secondary-dark);
 }
