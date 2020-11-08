@@ -1,0 +1,79 @@
+.page-header { /* área de cor lilás */
+    background-color: var(--color-primary);
+
+    display: flex; /* flexibiliza o posicionamento */
+    /* flex - coloca o conteúdo em linha - um do lado do outro */
+    flex-direction: column; /* posiciona em columas - um abaixo do outro */
+}
+
+.page-header .top-bar-container { /* img "seta" e img "Proffy" */
+    width: 90%; /* largura do preenchimento do .top-bar... de 90% do .page-header */
+    margin: 0 auto; /* 0 cima-baixo, auto direita-esquerda (mesma distância - centraliza) */
+
+    display: flex;
+    align-items: center; /* alinha ao centro */
+    justify-content: space-between; /* justifica espaçamento entre os conteúdos */
+
+    padding: 1.6rem 0; /* espaçamento interno */
+}
+
+.page-header .top-bar-container a img{ /* imagen "seta" */
+    height: 3.2rem; /* tamanho */
+    transition: opacity 0.2s; /* tipo de transição e tempo de transição */
+    /* precisa do hover (a baixo) para funcionar */
+}
+
+.page-header .top-bar-container a:hover { /* hover - quando o mouse está focando */ 
+    opacity: 0.6; /* diminui a opacidade para 60% */
+}
+
+.page-header .top-bar-container > img { /* imagen "Proffy" */
+    height: 1.6rem; 
+}
+
+.page-header .header-content { /* conteúdo do formulário */
+    width: 90%; /* largura */
+    margin: 3.2rem auto; /* 3.2rem cima-baixo, auto direita-esquerda (mesma distância - centraliza) */
+
+    position: relative; /* para poder o position: absolute na linha 227 */
+}
+.page-header .header-content strong { /* texto "Essas são ... */
+    font: 700 3.6rem Archivo; /* configuração da fonte */
+    line-height: 4.2rem; /* altura entre as linhas do texto */
+    color: var(--color-title-in-primary);
+}
+
+.page-header .header-content p { /* texto "Primeiro passo é... */
+    max-width: 30rem;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: var(--color-title-in-primary);
+    margin-top: 2.4rem;
+}
+
+@media(min-width:700px) {
+    .page-header {
+        height: 340px;
+    }
+
+    .page-header .top-bar-container { /* seta "voltar" e logo "Proffy" */
+        max-width: 1100px;
+    }
+
+    .page-header .header-content { /* texto inicial, caixas de seleção e botão */
+        max-width: 740px;
+
+        margin: 0 auto;
+
+        flex: 1 1;
+        padding-bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
+    }
+
+    .page-header .header-content strong { /* texto inicial */
+        max-width: 350px;
+    }
+
+}
