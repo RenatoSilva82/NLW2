@@ -1,0 +1,202 @@
+#page-study #container {
+    width: 100vw;
+    height: 100vh;
+}
+
+#search-teachers { /* formulário */
+    margin-top: 3.2rem; /* margem superior */
+}
+
+#search-teachers label { /* textos do formulário */
+    color: var(--color-text-in-primary);
+}
+
+#search-teachers .select-block { /* select: matérias e dias */
+    margin-bottom: 1.4rem; /* margem inferior */
+}
+
+#search-teachers button {
+    width: 100%; /* largura */
+    height: 5.6rem; /* tamanho */
+    background: var(--color-secondary); /* cor de fundo */
+    color: var(--color-button-text); /* cor do texto */
+    border: 0; /* sombra da borda (0 - sem sombra) */
+    border-radius: 0.8rem; /* espessura da borda */
+    cursor: pointer; /* tipo do cursor */
+    font: 700 1.6rem Archivo; /* especificação da fonte*/
+    display: flex;
+    align-items: center; /* alinha o texto ao centro (vertical) */
+    justify-content: center; /* justifica o texto ao centro (horizontal) */
+    text-decoration: none; /* decoração do texto - nenhuma */
+    transition: background 0.2s; /* tipo e tempo da transição */
+    margin-top: 3.2rem; /* margin superior */
+}
+
+#search-teachers button:hover {
+    background-color: var(--color-secondary-dark); /* muda a cor do funto ao passar o mouse */
+}
+
+
+#page-study main { /* espaça com todas as caixas dos professores */
+    margin: 3.2rem;
+    width: 90%;
+}
+
+.teacher-item { /* caixa de exibição de cada professor */
+    background-color: var(--color-box-base);
+    border: 1px solid var(--color-line-in-white);
+    border-radius: 0.8rem;
+    margin-top: 2.4rem
+}
+
+.teacher-item header { /* foto, nome, matéria */
+    padding: 3.2rem 2rem;
+    display: flex;
+    align-items: center; /* alinhamento vertical */
+}
+ 
+.teacher-item header img { /* imagem */
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%; /* faz a imagem ficar em um circulo */
+}
+
+.teacher-item header div { /* nome do professor e matéria */
+    margin-left: 2.4rem;
+}
+
+.teacher-item header div strong { /* nome do professor */
+    font: 700 2.4rem Archivo;
+    display: block; /* faz o elemento ocupar toda a linha */
+    color: var(--color-text-title)
+}
+
+.teacher-item header div span { /* matéria */
+    font-size: 1.6rem;
+    display: block; /* faz o elemento ocupar toda a linha */
+    margin-top: 0.4rem; /* precisa do display: block */
+}
+
+.teacher-item > p { /* descrição do professor ( > pega somente o primeiro nível do p )*/
+    padding: 0 2rem; /* espaçamento - 0 cima e embaixo, 2 direita e esquerda */
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+
+.teacher-item footer { /* caixa de exibição do preço e contado do whatsapp */
+    padding: 3.2rem 2rem; /* espaçamento - 3.2 cima e embaixo, 2 direita e esquerda */
+    background-color: var(--color-box-footer);
+    border-top: 1px solid var(--color-line-in-white); /* linha acima do preço */
+    margin-top: 3.2rem;
+
+    display: flex; /* um elemento ao lado do outro */
+    align-items: center; /* centalizado verticalmente */
+    justify-content: space-between; /* mesmo espaço entre os elementos e a borda */
+}
+
+.teacher-item footer p { /* Preço/hora e R$20,00 */
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--color-text-complement);
+}
+
+.teacher-item footer p strong { /* R$20,00 */
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    display: block; /* faz o elemento ocupar toda a linha */
+}
+
+.teacher-item footer button { /* botão "Entrar em contato" */
+    width: 20rem;
+    height: 5.6rem;
+    background: var(--color-secondary);
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font: 700 1.4rem Archivo;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; /* espaçamento constante entre os elementos e as bordas */
+
+    text-decoration: none;
+
+    transition: background 0.2s;
+    margin-left: 1.6rem;
+} 
+
+.teacher-item footer button:hover {
+    background: var(--color-secondary-dark);
+}
+
+@media(min-width:700px) {
+    #page-study #container {
+        max-width: 100vw;
+    }
+
+    .page-header {
+        height: 340px;
+    }
+
+    .page-header .top-bar-container { /* seta "voltar" e logo "Proffy" */
+        max-width: 1100px;
+    }
+
+    .page-header .header-content { /* texto inicial, caixas de seleção e botão */
+        max-width: 740px;
+
+        margin: 0 auto;
+
+        flex: 1 1;
+        padding-bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .page-header .header-content strong { /* texto inicial */
+        max-width: 350px;
+    }
+
+    .teacher-item header,
+    .teacher-item footer {
+        padding: 32px;
+    }
+
+    #search-teachers { /* caixas de seleção e botão */
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        /* divide o grid em 4 colomas com 1fr de tamanho cada */
+        gap: 16px; /* espaçamento entre as colunas */
+        position: absolute; /* absoluto em relação a página toda (aula 02 - 2:40) */ 
+        bottom: -28px;
+
+    }
+
+    #page-study main { /* espaço onde fica o conteúdo dos professores */
+        padding: 32px 0;
+        max-width: 740px;
+        margin: 0 auto;
+    }
+
+    #search-teachers .select-block { /* caixas de seleção */
+        margin-bottom: 0;
+    }
+
+    .teacher-item footer p strong { /* Preço/hora e R$ 20,00 */
+        display: initial; /* faz os elementos ocuparem a mesma linha */
+        margin-left: 16px;
+    }
+
+    .teacher-item footer button { /* botão */
+        width: 245px;
+        font-size: 16px;
+        justify-content: center; /* centraliza o conteúdo do botão ao centro ( img(zap) e texto(Entrar em contato) ) */
+    }
+
+    .teacher-item footer button img { /* imagem "zap" */
+        margin-right: 16px; /* separação entre a imagem e o texto */
+    }
+
+}
