@@ -106,7 +106,7 @@
     display: block; /* faz o elemento ocupar toda a linha */
 }
 
-.teacher-item footer button { /* botão "Entrar em contato" */
+.teacher-item footer .button { /* botão "Entrar em contato" */
     width: 20rem;
     height: 5.6rem;
     background: var(--color-secondary);
